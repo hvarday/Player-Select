@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <link rel="stylesheet" href="stylesheets/main.css"/>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle=offcanvas]').click(function() {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div id="gplheader" class="page-title hidden-xs hidden-sm hidden-md">
+            <header class="banner" role="banner">
+
+                <span><img src="images/header-left.jpg" height="60" class="pull-left"/><img class="logo" src="images/gpllogo.png" height="50" class="pull-left"/><span class="h2 gplheadertext">graVITas Premier League 2.0</span><img src="images/header-right.jpg" height="60" class="pull-right"/></span>
+
+            </header>
+        </div>
+
+        <div id="navbar-wrapper">
+            <nav id="navbar" ></nav>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Batsman</a></li>
+                <li><a href="#">Bowler</a></li>
+                <li><a href="#">Coach</a></li>
+                <li><a href="#">All Rounder</a></li>
+            </ul>
+
+        </div><!--/span-->
+
+        <div class="col-sm-9 col-md-10 main">
+
+            <!--toggle sidebar button-->
+            <p class="visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+            </p>
+
+            <h1 class="page-header">
+                Player Selection Page
+            </h1>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 text-center">
+                    <h3 class="modal-header" id="important" class="text-center panel-info">Important Information</h3>
+                    <p class="text-center" id="message">You need to select a minimum of <strong>6 batsmen</strong>, <strong>4 bowlers</strong>, <strong>2 coaches</strong> and <strong>4 all-rounders</strong>.<br>Enjoy playing <strong>graVITas Premiere League!</strong>.</p>
+                </div>
+            </div>
+        </div><!--/row-->
+    </div>
+</div><!--/.container-->
+<!-- FOOTER -->
+<footer id="footer" class="footer">
+</footer>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+</body>
+<script src="javascripts/main.js"></script>
+</html>
